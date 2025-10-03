@@ -1,11 +1,11 @@
 import os
 import gymnasium as gym
-from stable_baselines3 import PPO 
+from stable_baselines3 import DQN 
 
-PPO_PATH = os.path.join('Training', 'Saved Models', 'PPO_Model_CartPole')
+DQN_PATH = os.path.join('Training', 'Saved Models', 'DQN_Model_CartPole')
 
 env = gym.make('CartPole-v1', render_mode="human")
-model = PPO.load(PPO_PATH)
+model = DQN.load(DQN_PATH)
 
 episodes = 5
 max_steps_per_episode = 500  
