@@ -25,9 +25,4 @@ for episode in range(1, episodes+1):
         if steps % 100 == 0:
             print(f'Episode {episode}, Steps: {steps}')
 
-    if steps >= max_steps_per_episode:
-        print('Episode:{} Score:{} Steps:{} (Reached step limit)'.format(episode, score, steps))
-    else:
-        print('Episode:{} Score:{} Steps:{} (Pole fell)'.format(episode, score, steps))
-
 env.close()
