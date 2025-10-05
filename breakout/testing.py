@@ -1,11 +1,11 @@
 import os
 import gymnasium as gym
-from stable_baselines3 import A2C
+from stable_baselines3 import DQN
 from stable_baselines3.common.vec_env import VecFrameStack
 from stable_baselines3.common.env_util import make_atari_env
 import ale_py
 
-A2C_PATH = os.path.join('Training', 'Saved Models', 'A2C_Breakout_Model')
+DQN_PATH = os.path.join('Training', 'Saved Models', 'dqn_breakout_final')
 
 gym.register_envs(ale_py)
 
@@ -13,7 +13,7 @@ env = make_atari_env("ALE/Breakout-v5", n_envs=1, seed=1,
                      env_kwargs={'render_mode': 'human'})
 env = VecFrameStack(env, n_stack=4)
 
-model = A2C.load(A2C_PATH)
+model = DQN.load(DQN_PATH)
 
 episodes = 5
 max_steps_per_episode = 500

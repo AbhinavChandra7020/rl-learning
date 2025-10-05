@@ -91,6 +91,7 @@ tensorboard-data-server==0.7.2
 tensorstore==0.1.77
 toolz==1.0.0
 torch==2.8.0
+torchvision==0.23.0+cu126
 tqdm==4.67.1
 treescope==0.1.10
 triton==3.4.0
