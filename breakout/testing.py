@@ -5,7 +5,7 @@ from stable_baselines3.common.vec_env import VecFrameStack
 from stable_baselines3.common.env_util import make_atari_env
 import ale_py
 
-DQN_PATH = os.path.join('Training', 'Saved Models', 'dqn_breakout_final')
+DQN_PATH = os.path.join('Training', 'Saved Models', 'best_model', 'best_model')
 
 gym.register_envs(ale_py)
 

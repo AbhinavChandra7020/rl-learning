@@ -1,3 +1,5 @@
 myenv
-env*
 Training/
+__pycache__
+logs/
+saved_models/
